@@ -24,7 +24,9 @@ $$p(w_i|w_t;\theta) = \frac{exp(\theta w_i)}{\sum_texp(\theta w_t)}$$
 此处$\theta$也被称为embedding lookup matrix，如果$w_i$是$n$维基于one-hot的编码，$\theta$便是$n*k$维matrix，可以将原始编码重新映射为长度为$k$目标编码。从结构上看来，这就是一个简单的3层神经网络：
 
 1. 输入一个单词，训练网络获得它的邻近单词
-2. 
+2. 隐藏层的输出就是输入单词的低维嵌入表示
+
+问题：能根据理解手写一个word2vec的词预训练器吗？
 
 
 
