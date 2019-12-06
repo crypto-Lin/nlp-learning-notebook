@@ -23,12 +23,12 @@ $$r_t = \sigma (W^{(r)}x_t + U^{(r)}h_{t-1})$$
 Reset gate用来决定对于过去的信息选择多少去遗忘。
 
 3. Current memory content
-$$h^{\prime}_t = tanh(Wx_t + r_t\odot Uh_{t-1})$$
+$$h^c_t = tanh(Wx_t + r_t\odot Uh_{t-1})$$
 对于过去的信息选择性提取一部分，并且整合当前的输入信息，给出当前cell的memory信息。
 
 4. Final memory at current time step
-$$h_t = z_t\odot h_{t-1} + (1-z_t)\odot h^{\prime}_t$$
-对于当前cell的最终输出$h_t$，一部分来自$h_{t-1}$，另一部分由$h^{\prime}_t$贡献，$z_t$可以视作选择概率，两项系数求和刚好为1.
+$$h_t = z_t\odot h_{t-1} + (1-z_t)\odot h^c_t$$
+对于当前cell的最终输出$h_t$，一部分来自$h_{t-1}$，另一部分由$h^c_t$贡献，$z_t$可以视作选择概率，两项系数求和刚好为1.
 
 以上为GRU结构的全部信息。
 ![GRU cell](./GRU.png)
