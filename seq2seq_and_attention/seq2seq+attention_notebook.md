@@ -29,9 +29,13 @@ $$e_{ij} = a(s_{i-1},h_j)$$
 ![seq2seq-attention](attention.png)
 
 那么具体的都有哪些打分机制呢？论文 [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/pdf/1508.04025.pdf) 当中提到了3中方式：
+
 ![](score.png)
+
 以下两张图分别给出dot和general的打分机制：
+
 ![](dot.png)
+
 ![](general.png)
 
 Q. encoder-decoder translation model 是怎么训练的？损失函数是怎么定义的？
