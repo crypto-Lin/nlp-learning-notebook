@@ -34,8 +34,7 @@ BERT使用了Transformer里面的encoder机制。不同于那些directional mode
 通常MLM和NSP会组合成损失函数，BERT训练的目的是要使这个联合损失函数最小。
 
 #### HOW TO BERT？
-BERT在语言处理任务中有非常广泛的应用，只需要在原有的模型上添加一层：
-1. 
+BERT在语言处理任务中有非常广泛的应用，只需要在原有的模型上添加一层。
 
 
 
